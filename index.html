@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0066cc;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Blog Viewer</h1>
+
+    <ul>
+        <% blogPosts.forEach(post => { %>
+            <li>
+                <h2><%= post.title %></h2>
+                <p><%= post.content %></p>
+            </li>
+        <% }); %>
+    </ul>
+
+    <a href="/new">New Blog Post</a>
+
+</body>
+</html>
